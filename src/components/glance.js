@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import{Card, Row, Col}  from 'react-bootstrap'
 import axios from 'axios'
 
 class Glance extends Component{
@@ -16,15 +17,36 @@ class Glance extends Component{
         data:res.data.data
       })
 
-      console.log(this.state.data)
     })
   }
 
 
   render() {
+    const {data} = this.state;
+    const mountData = []
+
+    for(let i = 0; i < data.length; i++) {
+      if(i <= 3) {
+        mountData.push(data[i])
+      }
+    }
+
+    console.log(mountData)
+
     return(
       <div>
-        <h1>test</h1>
+        <Row>
+          {mountData.map(item => (
+            <Col>
+              <Card>
+                <Card.Body>
+                  <Card.Title>{item.name}</Card.Title>
+                  <Card.Text>Rp. {item.price}</Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
       </div>
     );
   }
