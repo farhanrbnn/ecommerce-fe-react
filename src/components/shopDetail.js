@@ -24,7 +24,6 @@ class ShopDetail extends Component{
 
   render() {
     const item = this.state.data
-
     return(
       <div>
         <Container>
@@ -35,7 +34,6 @@ class ShopDetail extends Component{
                   <Card.Title>{item.name}</Card.Title>
                   <Card.Text>Rp. {item.price} </Card.Text>
                 </Card.Body>
-
               </Card>
             </Col>         
           </Row>
