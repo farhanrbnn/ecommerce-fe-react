@@ -1,0 +1,16 @@
+.button-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 90px;
+    transform: translate(-50%, -50%);
+}
+
+.title-center {
+    font-size: 45px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}

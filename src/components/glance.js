@@ -31,10 +31,19 @@ class Glance extends Component{
       }
     }
 
-    console.log(mountData)
+    const test = false
+
+    const teskondisi = () => {
+      if(test) {
+        return <h1>ini benar</h1>
+      } else {
+        return <h1>ini salah</h1>
+      }
+    }
 
     return(
       <div>
+        {teskondisi()}
         <Row>
           {mountData.map(item => (
             <Col>
